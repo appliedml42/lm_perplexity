@@ -22,6 +22,10 @@ def main():
     }
     if args.utf8_conversion_scalar is not None:
         result["bpb"] = float(np.log2(perplexity) * args.utf8_conversion_scalar)
+    elif 'aggregate_length' in perplexity_data and 'aggregate_utf8_length' in perplexity_data:
+        utf8_conversion_scalar = perplexity_data['aggregate_length']/perplexity_data['aggregate_utf8_length']
+        result['bpb'] = float(np.log2(perplexity) * utf8_conversion_scalar)
+
     if args.output_path:
         with open(args.output_path, "w") as f:
             f.write(json.dumps(result, indent=2))
