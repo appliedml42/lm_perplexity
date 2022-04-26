@@ -32,6 +32,7 @@ class AppliedML42LM(LM):
         self.tokenizer: spm.SentencePieceProcessor
         self.model: GPT
 
+        self.model_name = model_name
         self.tokenizer = spm.SentencePieceProcessor()
         self.tokenizer.load(tokenizer_path)
         self.vocab_size = self.tokenizer.vocab_size()
