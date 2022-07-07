@@ -1,0 +1,10 @@
+{
+  "model_type": "appliedml42LM",
+  "model_name": "Jennifer_Privett",
+  "context_len": 1,
+  "max_seq_len": 1024,
+  "tokenizer_path": "/workspace/data/pile/tokenizer/50000.model",
+  "model_ckpt_path": "/workspace/experiments/language_modeling/Jennifer_Privett/checkpoints/epoch=0-step=500000.ckpt",
+  "verbose": false,
+  "device": "cuda"
+}
